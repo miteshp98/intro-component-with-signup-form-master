@@ -5,7 +5,11 @@ const inputElem = document.querySelectorAll("input");
 const errorMsg = document.querySelectorAll(".error-msg");
 const errorImg = document.querySelectorAll(".error-img");
 
+//Check Valid Email or not
+
 function checkValidEmail() {
+  //Regular Expresssion for Valid Character
+
   const regex = /^[a-zA-z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   let emailAddress = regex.test(inputElem[2].value);
 
@@ -19,7 +23,9 @@ function checkValidEmail() {
   }
 }
 
+//Check Valid Password
 function checkValidPassword() {
+  //Regular Expresssion for Valid Character
   const regex = /^[a-zA-Z0-9#@]{6,}$/;
   const minNumbersOfChar = 8;
 
@@ -35,6 +41,7 @@ function checkValidPassword() {
   }
 }
 
+//Will Remove Errors after 3 sec
 function hideError(num) {
   setTimeout(() => {
     errorMsg[num].classList.remove("visible");
@@ -43,6 +50,7 @@ function hideError(num) {
   }, 3000);
 }
 
+//Shows Error if not Valid
 function showErrors(index, message) {
   errorImg[index].classList.add("visible");
   errorMsg[index].classList.add("visible");
@@ -50,6 +58,7 @@ function showErrors(index, message) {
   errorMsg[index].innerHTML = message;
 }
 
+//Check Valid Names
 function checkValidNames() {
   let firstName = inputElem[0].value;
   let lastName = inputElem[1].value;
@@ -69,6 +78,7 @@ function checkValidNames() {
   return true;
 }
 
+//Submit Event Listener PreventDefault for not sending to server
 submitBtn.addEventListener("click", function (e) {
   const isEmailValid = checkValidEmail();
   const isNamesValid = checkValidNames();
