@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="wrapper">
+        <div class="detail-wrap">
+          <h1>
+            Learn to code by <br />
+            Watching others
+          </h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+
+        <div class="form-wrap">
+          <div class="price-wrap">
+            <p><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
+          </div>
+          <form action="">
+            <label for="firstName" class="firstName-label">
+              <input
+                type="text"
+                name="firstName"
+                class="first-name"
+                placeholder="First Name"
+              />
+              <img src="images/icon-error.svg" alt="" class="error-img" />
+            </label>
+            <p class="error-msg"></p>
+            <label for="lastName" class="lastName-label">
+              <input
+                type="text"
+                name="lastName"
+                class="last-name"
+                placeholder="Last Name"
+              />
+              <img src="images/icon-error.svg" alt="" class="error-img" />
+            </label>
+            <p class="error-msg"></p>
+            <label for="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value=""
+                placeholder="Email Address"
+              />
+              <img src="images/icon-error.svg" alt="" class="error-img" />
+            </label>
+            <p class="error-msg"></p>
+            <label for="Password">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+              <img src="images/icon-error.svg" alt="" class="error-img" />
+            </label>
+            <p class="error-msg"></p>
+            <button type="submit" class="submit-btn">
+              Claim Your Free Trial
+            </button>
+
+            <p class="terms-condition">
+              By clicking the button, you are agreeing to our
+              <a href="#">Terms and services</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
